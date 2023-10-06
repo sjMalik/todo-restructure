@@ -1,8 +1,9 @@
-const express = require('express');
+// const express = require('express');
 const debug = require('debug')('todos:server');
+const app = require('./app');
 const { PORT } = require('./config');
 
-const app = express();
+// const app = express();
 
 app.listen(PORT, () => {
     debug(`Listening on port ${PORT}`);
