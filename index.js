@@ -1,10 +1,7 @@
-// const express = require('express');
 const debug = require('debug')('todos:server');
 const app = require('./app');
 const { PORT } = require('./config');
 const { databaseConnection } = require('./database');
-
-// const app = express();
 
 const StartServer = async () => {
     await databaseConnection();

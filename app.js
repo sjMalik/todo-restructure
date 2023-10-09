@@ -1,5 +1,6 @@
 const express = require('express');
 const HandleErrors = require('./utils/error-handler');
+const { todos } = require('./routes');
 
 const app = express();
 
@@ -10,6 +11,9 @@ app.use('/', (req, res, next) => {
         next(e);
     }
 });
+
+// APIs
+todos(app);
 
 // error handling
 app.use(HandleErrors);
